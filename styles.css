@@ -49,7 +49,7 @@ body, html {
 }
 
 .main-content section {
-    margin-bottom: 20px;
+    display: none; /* Initially hide all sections */
 }
 
 .main-content h2 {

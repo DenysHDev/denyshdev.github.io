@@ -12,36 +12,37 @@
             <h1>My Portfolio</h1>
             <nav>
                 <ul>
-                    <li><a href="#info">My Info</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('info')">My Info</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('education')">Education</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('skills')">Skills</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('projects')">Projects</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('contact')">Contact</a></li>
                 </ul>
             </nav>
         </div>
         <div class="main-content">
-            <section id="info">
+            <section id="info" class="content-section">
                 <h2>My Info</h2>
                 <p>Description about yourself.</p>
             </section>
-            <section id="education">
+            <section id="education" class="content-section" style="display:none;">
                 <h2>Education</h2>
                 <p>Details about your educational background.</p>
             </section>
-            <section id="skills">
+            <section id="skills" class="content-section" style="display:none;">
                 <h2>Skills</h2>
                 <p>List of your skills.</p>
             </section>
-            <section id="projects">
+            <section id="projects" class="content-section" style="display:none;">
                 <h2>Projects</h2>
                 <p>Overview of projects you've worked on.</p>
             </section>
-            <section id="contact">
+            <section id="contact" class="content-section" style="display:none;">
                 <h2>Contact</h2>
                 <p>How people can get in touch with you.</p>
             </section>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
