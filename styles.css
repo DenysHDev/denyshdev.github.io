@@ -80,6 +80,31 @@ body, html {
     margin-top: 10px;
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-item {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skill-item img {
+    max-width: 50px; 
+    height: auto;
+}
+
+.skill-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
