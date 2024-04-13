@@ -54,7 +54,9 @@ body, html {
 .main-content {
     flex-grow: 1;
     background-color: #ffffff;
-    padding: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
     overflow-y: auto;
 }
 
