@@ -21,7 +21,7 @@
             </nav>
         </div>
         <div class="main-content">
-            <section id="info" class="content-section">
+            <section id="info" class="content-section" style="display: block;">
                 <h2>My Info</h2>
                 <p>Hi there. My name is Denys. I'm a junior software developer.</p>
             </section>
@@ -68,20 +68,35 @@
                     <li>
                         <h3>Introduction to the Go Programming Language.</h3>
                         <p>Start of my software development career. Various tasks ranging from learning basic concepts of Golang to the exploration of various algorithms to solve complex problems.</p>
-                        <a href="https://github.com/DenysHDev/firstprojects" target="_blank">GitHub Repo</a>
+                        <a href="https://github.com/DenysHDev/firstprojects" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('firstprojects')">View Gallery</button>
                     </li>
                     <li>
                         <h3>Project Title 2</h3>
                         <p>Description of Project 2.</p>
-                        <a href="https://github.com/DenysHDev/firstprojects" target="_blank">GitHub Repo</a>
+                        <a href="https://github.com/DenysHDev/firstprojects" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('project2')">View Gallery</button>
                     </li>
                     <li>
                         <h3>Project Title 3</h3>
                         <p>Description of Project 3.</p>
-                        <a href="https://github.com/DenysHDev/firstprojects" target="_blank">GitHub Repo</a>
+                        <a href="https://github.com/DenysHDev/firstprojects" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('project3')">View Gallery</button>
                     </li>
                 </ul>
             </section>
+                      
+            <div id="galleryModal" class="modal">
+                <span class="close" onclick="closeGallery()">&times;</span>
+                <div class="modal-content" id="galleryContent"></div>
+            </div>
+            
+            <div id="fullImageModal" class="modal">
+                <span class="close" onclick="closeFullImage()">&times;</span>
+                <button class="nav-button left" onclick="showPreviousImage()">&#10094;</button>
+                <img id="fullImage" class="full-image" onclick="toggleFullImage()">
+                <button class="nav-button right" onclick="showNextImage()">&#10095;</button>
+            </div>
             <section id="contact" class="content-section" style="display:none;">
                 <h2>Contact</h2>
                 <p>My contact info.</p>
