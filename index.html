@@ -66,37 +66,54 @@
                 <h2>Projects</h2>
                 <ul>
                     <li>
-                        <h3>Itinerary Prettifier</h3>
-                        <p>A command line tool in Go to transform text-based flight itineraries into customer-friendly formats. The tool reads itineraries, converts airport codes to names using a CSV lookup, and formats dates and times into more readable forms. The tool includes error handling to manage missing files and malformed data. Additionally, it supports dynamic column orders in the airport lookup file and offers optional output formatting to highlight key information. Please note that my GitHub repository for this project is private as requested by Kood/Sisu. Interested parties should contact me via email, as provided in the contact section, to request access.</p>
+                        <h3>
+                            Command-line Art Encoding/Decoding Tool
+                            <img src="images/screenshots/art-decoder/artdecoder3.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/art-decoder/artdecoder3.png')">
+                        </h3>
+                        <p>A versatile Go application for encoding and decoding strings based on a custom compression technique, ideal for handling repetitive patterns in ASCII art and text. This tool validates input, ensuring balanced brackets and proper format, and supports single-line and multi-line operations. Users can decode compressed strings from command-line arguments, files, and output results to the console or files. Similarly, it can encode input strings, supporting both single-line and multi-line formats, with outputs to the console or files. This project enhances string manipulation skills and provides efficient processing for text-based art. Please note that my GitHub repository for this project is private as requested by Kood/Sisu. Interested parties should contact me via email, as provided in the contact section, to request access.</p>
+                        <a href="https://github.com/DenysHDev/art-decoder" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('art-decoder')">View Gallery</button>
+                    </li>
+                    <li>
+                        <h3>
+                            Itinerary Prettifier
+                            <img src="images/screenshots/itinerary-prettifier/itinerary2.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/itinerary-prettifier/itinerary2.png')">
+                        </h3>
+                        <p>A command line tool in Go which can be used to transform text-based flight itineraries into customer-friendly formats. The tool reads itineraries, converts airport codes to names using a CSV lookup, and formats dates and times into more readable forms. The tool includes error handling to manage missing files and malformed data. Additionally, it supports dynamic column orders in the airport lookup file and offers optional output formatting to highlight key information. Please note that my GitHub repository for this project is private as requested by Kood/Sisu. Interested parties should contact me via email, as provided in the contact section, to request access.</p>
                         <a href="https://github.com/DenysHDev/itinerary" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('itinerary-prettifier')">View Gallery</button>
                     </li>
                     <li>
-                        <h3>Introduction to the Go Programming Language.</h3>
+                        <h3>
+                            Introduction to the Go Programming Language
+                            <img src="images/screenshots/firstprojects/entryorganizer1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/firstprojects/entryorganizer1.png')">
+                        </h3>
                         <p>Start of my software development career. Involves various tasks ranging from learning basic concepts of Golang to exploring complex algorithms. These tasks consist of standalone functions and two group tasks: an Encryption Tool and an Entry Organizer Tool. Please note that my GitHub repository for this project is private as requested by Kood/Sisu. Interested parties should contact me via email, as provided in the contact section, to request access.</p>
                         <a href="https://github.com/DenysHDev/firstprojects" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('firstprojects')">View Gallery</button>
                     </li>
-                    <li>
-                        <h3>Project Title 3</h3>
-                        <p>Description of Project 3.</p>
-                        <a href="https://github.com/DenysHDev/firstprojects" target="_blank" class="button">GitHub Repository</a>
-                        <button class="button" onclick="showGallery('project3')">View Gallery</button>
-                    </li>
                 </ul>
             </section>
-                      
+            
+            <!-- Existing Gallery Modal -->
             <div id="galleryModal" class="modal">
                 <span class="close" onclick="closeGallery()">&times;</span>
                 <div class="modal-content" id="galleryContent"></div>
             </div>
             
+            <!-- Full Image Modal for Gallery -->
             <div id="fullImageModal" class="modal">
                 <span class="close" onclick="closeFullImage()">&times;</span>
-                <button class="nav-button left" onclick="showPreviousImage()">&#10094;</button>
                 <img id="fullImage" class="full-image" onclick="toggleFullImage()">
+                <button class="nav-button left" onclick="showPreviousImage()">&#10094;</button>
                 <button class="nav-button right" onclick="showNextImage()">&#10095;</button>
             </div>
+            
+            <!-- Full Image Modal for Single Preview Image -->
+            <div id="singleImageModal" class="modal" onclick="closeSingleImage()">
+                <img id="singleImage" class="full-image">
+            </div>
+            
             <section id="contact" class="content-section" style="display:none;">
                 <h2>Contact</h2>
                 <p>My contact info.</p>

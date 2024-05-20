@@ -154,6 +154,53 @@ body, html {
 }
 
 
+/* Project preview images */
+.project-preview {
+    width: 50px; /* Set a small width for the preview image */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Space between the image and the project title */
+    vertical-align: middle; /* Align the image with the text */
+    border: 1px solid #ddd; /* Add a light border */
+    background-color: #f8f8f8; /* Add a light background color */
+    padding: 5px; /* Add some padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow */
+    cursor: pointer; /* Indicate that the image is clickable */
+}
+
+/* Single Image Modal for Preview */
+#singleImageModal {
+    display: none;
+    position: fixed;
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+#singleImageModal .single-full-image {
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: 5%;
+    cursor: pointer; /* Make it clear the image can be clicked */
+    object-fit: contain; /* Ensure the image maintains proportions and fits within the modal */
+}
+
+/* Add hover effect for project-preview images */
+.project-preview {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-preview:hover {
+    transform: scale(5); /* Scale up the image slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+
 
 /* General button styling */
 .button {

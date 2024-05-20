@@ -1,3 +1,8 @@
+let isFullImageView = false;
+let currentImageIndex = 0;
+let images = [];
+
+// Show a specific section
 function showSection(sectionId) {
     // Hide all sections
     document.querySelectorAll('.content-section').forEach((section) => {
@@ -8,10 +13,21 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
-let isFullImageView = false;
-let currentImageIndex = 0;
-let images = [];
+// Show a single preview image
+function showSingleImage(imageSrc) {
+    const singleImageModal = document.getElementById('singleImageModal');
+    const singleImage = document.getElementById('singleImage');
+    singleImage.src = imageSrc;
+    singleImageModal.style.display = 'block';
+}
 
+// Close the single image modal
+function closeSingleImage() {
+    const singleImageModal = document.getElementById('singleImageModal');
+    singleImageModal.style.display = 'none';
+}
+
+// Show the gallery for a specific project
 function showGallery(project) {
     const galleryModal = document.getElementById('galleryModal');
     const galleryContent = document.getElementById('galleryContent');
@@ -29,10 +45,11 @@ function showGallery(project) {
             'images/screenshots/firstprojects/entryorganizer1.png',
             'images/screenshots/firstprojects/entryorganizer2.png'
         ];
-    } else if (project === 'project3') {
+    } else if (project === 'art-decoder') {
         images = [
-            'images/screenshots/project3/image1.png',
-            'images/screenshots/project3/image2.png'
+            'images/screenshots/art-decoder/artdecoder1.png',
+            'images/screenshots/art-decoder/artdecoder2.png',
+            'images/screenshots/art-decoder/artdecoder3.png'
         ];
     }
 
@@ -48,6 +65,7 @@ function showGallery(project) {
     isFullImageView = false;
 }
 
+// Show the full image in the gallery
 function showFullImage(index) {
     currentImageIndex = index;
     const fullImageModal = document.getElementById('fullImageModal');
@@ -58,6 +76,7 @@ function showFullImage(index) {
     isFullImageView = true;
 }
 
+// Toggle the full image modal
 function toggleFullImage() {
     const fullImageModal = document.getElementById('fullImageModal');
     if (isFullImageView) {
@@ -70,20 +89,24 @@ function toggleFullImage() {
     isFullImageView = !isFullImageView;
 }
 
+// Close the gallery modal
 function closeGallery() {
     document.getElementById('galleryModal').style.display = 'none';
 }
 
+// Close the full image modal
 function closeFullImage() {
     document.getElementById('fullImageModal').style.display = 'none';
     isFullImageView = false;
 }
 
+// Show the previous image in the gallery
 function showPreviousImage() {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     showFullImage(currentImageIndex);
 }
 
+// Show the next image in the gallery
 function showNextImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     showFullImage(currentImageIndex);
