@@ -10,6 +10,10 @@ body, html {
     background: #f0f2f5;
 }
 
+.content-section p {
+    text-align: justify;
+}
+
 /* Container holding the sidebar and main content */
 .container {
     display: flex;
@@ -195,8 +199,8 @@ body, html {
     margin: 10px;
     max-width: 300px;
     max-height: 300px;
-    border: 2px solid white;
     border-radius: 8px;
+    object-fit: contain; /* Ensures images are contained within the max dimensions */
     cursor: pointer; /* Indicate that images are clickable */
 }
 
@@ -224,6 +228,10 @@ body, html {
     max-height: 90%;
     margin: auto;
     cursor: pointer; /* Make it clear the image can be clicked */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #fullImageModal {
@@ -270,6 +278,7 @@ body, html {
 .nav-button:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
 
 
 

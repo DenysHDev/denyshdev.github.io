@@ -8,7 +8,6 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
-
 let isFullImageView = false;
 let currentImageIndex = 0;
 let images = [];
@@ -18,11 +17,24 @@ function showGallery(project) {
     const galleryContent = document.getElementById('galleryContent');
     galleryContent.innerHTML = '';
 
-    images = [
-        `images/screenshots/${project}/encryptiontool1.png`,
-        `images/screenshots/${project}/entryorganizer1.png`,
-        `images/screenshots/${project}/entryorganizer2.png`
-    ];
+    // Define images based on project
+    if (project === 'itinerary-prettifier') {
+        images = [
+            'images/screenshots/itinerary-prettifier/itinerary1.png',
+            'images/screenshots/itinerary-prettifier/itinerary2.png'
+        ];
+    } else if (project === 'firstprojects') {
+        images = [
+            'images/screenshots/firstprojects/encryptiontool1.png',
+            'images/screenshots/firstprojects/entryorganizer1.png',
+            'images/screenshots/firstprojects/entryorganizer2.png'
+        ];
+    } else if (project === 'project3') {
+        images = [
+            'images/screenshots/project3/image1.png',
+            'images/screenshots/project3/image2.png'
+        ];
+    }
 
     images.forEach((src, index) => {
         const img = document.createElement('img');
@@ -68,7 +80,7 @@ function closeFullImage() {
 }
 
 function showPreviousImage() {
-    currentImageIndex = (currentImageIndex - 1 + images.length) == images.length ? 0 : (currentImageIndex - 1 + images.length) % images.length;
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     showFullImage(currentImageIndex);
 }
 
