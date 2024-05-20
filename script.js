@@ -51,6 +51,16 @@ function showGallery(project) {
             'images/screenshots/art-decoder/artdecoder2.png',
             'images/screenshots/art-decoder/artdecoder3.png'
         ];
+    } else if (project === 'art-interface') {
+        images = [
+            'images/screenshots/art-interface/artinterface1.png',
+            'images/screenshots/art-interface/artinterface2.png',
+            'images/screenshots/art-interface/artinterface3.png',
+            'images/screenshots/art-interface/artinterface4.png',
+            'images/screenshots/art-interface/artinterface5.png',
+            'images/screenshots/art-interface/artinterface6.png',
+            'images/screenshots/art-interface/artinterface7.png'
+        ];
     }
 
     images.forEach((src, index) => {
