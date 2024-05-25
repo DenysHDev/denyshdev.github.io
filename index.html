@@ -64,8 +64,21 @@
             </section>
             <section id="projects" class="content-section">
                 <h2>Projects</h2>
-                <ul>
-                    <li>
+                <div class="filter-buttons">
+                    <button class="filter-button" onclick="filterProjects('all')">ALL</button>
+                    </button>
+                    <button class="filter-button" onclick="filterProjects('golang')">
+                        <img src="images/golang.png" alt="Go Lang">
+                    </button>
+                    <button class="filter-button" onclick="filterProjects('html')">
+                        <img src="images/html5.png" alt="HTML5">
+                    </button>
+                    <button class="filter-button" onclick="filterProjects('css')">
+                        <img src="images/css3.png" alt="CSS3">
+                    </button>
+                </div>
+                <ul id="project-list">
+                    <li data-language="golang,html,css">
                         <h3>
                             Art Decoder/Encoder Web Interface
                             <img src="images/screenshots/art-interface/artinterface1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/art-interface/artinterface1.png')">
@@ -74,7 +87,16 @@
                         <a href="https://github.com/DenysHDev/art-interface" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('art-interface')">View Gallery</button>
                     </li>
-                    <li>
+                    <li data-language="golang,html,css">
+                        <h3>
+                            Art Decoder/Encoder Web Interface
+                            <img src="images/screenshots/art-interface/artinterface1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/art-interface/artinterface1.png')">
+                        </h3>
+                        <p>Developed a Go server-powered web application for encoding and decoding text based on a custom compression technique, designed for handling repetitive patterns in ASCII art and text. This web interface for the art-decoder task allows users to submit encoded strings for decoding or convert text back into an encoded format for easy sharing. The tool ensures input validation, checking for balanced brackets and correct format. With a responsive design, the interface is visually appealing and easy to use. The project combines Go's efficiency with web technologies to provide an interactive experience for text-based art manipulation. Please note that my GitHub repository for this project is private as requested by Kood/Sisu. Interested parties should contact me via email, as provided in the contact section, to request access.</p>
+                        <a href="https://github.com/DenysHDev/art-interface" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('art-interface')">View Gallery</button>
+                    </li>
+                    <li data-language="golang">
                         <h3>
                             Command-line Art Encoding/Decoding Tool
                             <img src="images/screenshots/art-decoder/artdecoder3.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/art-decoder/artdecoder3.png')">
@@ -83,7 +105,7 @@
                         <a href="https://github.com/DenysHDev/art-decoder" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('art-decoder')">View Gallery</button>
                     </li>
-                    <li>
+                    <li data-language="golang">
                         <h3>
                             Itinerary Prettifier
                             <img src="images/screenshots/itinerary-prettifier/itinerary2.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/itinerary-prettifier/itinerary2.png')">
@@ -92,7 +114,7 @@
                         <a href="https://github.com/DenysHDev/itinerary" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('itinerary-prettifier')">View Gallery</button>
                     </li>
-                    <li>
+                    <li data-language="golang">
                         <h3>
                             Introduction to the Go Programming Language
                             <img src="images/screenshots/firstprojects/entryorganizer1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/firstprojects/entryorganizer1.png')">

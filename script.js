@@ -67,12 +67,18 @@ function showGallery(project) {
         const img = document.createElement('img');
         img.src = src;
         img.classList.add('gallery-image');
-        img.onclick = () => showFullImage(index);
+        img.onclick = (event) => {
+            event.stopPropagation();
+            showFullImage(index);
+        };
         galleryContent.appendChild(img);
     });
 
     galleryModal.style.display = 'block';
     isFullImageView = false;
+
+    // Add event listener to close gallery on background click
+    galleryModal.addEventListener('click', closeGalleryOnBackgroundClick);
 }
 
 // Show the full image in the gallery
@@ -84,6 +90,9 @@ function showFullImage(index) {
     fullImageModal.style.display = 'block';
     document.getElementById('galleryModal').style.display = 'none';
     isFullImageView = true;
+
+    // Add event listener to close full image on background click
+    fullImageModal.addEventListener('click', returnToGalleryOnBackgroundClick);
 }
 
 // Toggle the full image modal
@@ -120,4 +129,31 @@ function showPreviousImage() {
 function showNextImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     showFullImage(currentImageIndex);
+}
+
+// Close gallery on background click
+function closeGalleryOnBackgroundClick(event) {
+    if (!event.target.classList.contains('gallery-image')) {
+        closeGallery();
+    }
+}
+
+// Return to gallery preview on background click
+function returnToGalleryOnBackgroundClick(event) {
+    if (event.target.id === 'fullImageModal') {
+        closeFullImage();
+        document.getElementById('galleryModal').style.display = 'block';
+    }
+}
+
+function filterProjects(language) {
+    const projects = document.querySelectorAll('#project-list li');
+    projects.forEach(project => {
+        const dataLanguage = project.getAttribute('data-language');
+        if (language === 'all' || (dataLanguage && dataLanguage.split(',').includes(language))) {
+            project.style.display = 'list-item'; // Use 'list-item' to preserve dot styling
+        } else {
+            project.style.display = 'none';
+        }
+    });
 }
