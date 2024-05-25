@@ -108,50 +108,51 @@ body, html {
     margin: 5px 0 0;
 }
 
+
+/* Skills */
 .skills-grid {
     display: grid;
+    border-radius: 10px;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 20px;
+    gap: 15px; 
     padding: 20px;
-    background: #f0f2f5; /* Adds a slight off-white background to the container for contrast */
+    background: #f0f2f5; 
 }
 
 .skill-item {
     text-align: center;
-    background: #ffffff; /* White background */
-    border-radius: 10px; /* Slightly larger radius for a smoother curve */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.06); /* Enhanced shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
-    padding: 20px;
+    background: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.06); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px); /* Slight raise effect on hover */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); /* Deeper shadow on hover for 3D effect */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); 
 }
 
 .skill-item img {
     margin-top: 10px;
-    max-width: 60px; /* Increased width for better visibility */
-    height: 60px; /* Fixed height for uniformity */
-    transition: transform 0.3s ease; /* Smooth transformation on hover */
+    max-width: 50px; 
+    height: 50px; 
+    transition: transform 0.3s ease; 
 }
-
-.skill-item img:hover {
-    transform: scale(1); /* Slightly enlarges the image on hover */
-} 
-
 
 .skill-item p {
-    color: #333; /* Darker font color for better readability */
-    font-size: 16px; /* Larger font size */
-    padding-top: 10px; /* Space between image and text */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    color: #333; 
+    font-size: 14px; 
+    padding-top: 10px; 
+    transition: color 0.3s ease; 
+    margin: 0; /
 }
 
-.skill-item p:hover {
-    color: #6a11cb; /* Changes text color on hover to match the sidebar */
-}
+
 
 
 /* Project preview images */
