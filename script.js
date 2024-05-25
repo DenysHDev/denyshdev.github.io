@@ -91,6 +91,15 @@ function showGallery(project) {
             'images/screenshots/literary-lions-forum/literary-lions-forum6.png',
             'images/screenshots/literary-lions-forum/literary-lions-forum7.png'
         ];
+    } else if (project === 'dual-subs') {
+        images = [
+            'images/screenshots/dual-subs/dual-subs1.png',
+            'images/screenshots/dual-subs/dual-subs2.png',
+            'images/screenshots/dual-subs/dual-subs3.png',
+            'images/screenshots/dual-subs/dual-subs4.png',
+            'images/screenshots/dual-subs/dual-subs5.png'
+
+        ];
     }
 
 

@@ -78,6 +78,9 @@
                     <button class="filter-button" onclick="filterProjects('golang')">
                         <img src="images/Golang.png" alt="Go Lang">
                     </button>
+                    <button class="filter-button" onclick="filterProjects('java-script')">
+                        <img src="images/java-script.png" alt="java-script">
+                    </button>
                     <button class="filter-button" onclick="filterProjects('html')">
                         <img src="images/html5.png" alt="HTML5">
                     </button>
@@ -86,6 +89,15 @@
                     </button>
                 </div>
                 <ul id="project-list">
+                    <li data-language="java-script,html,css">
+                        <h3>
+                            Double Subtitles Chrome Extension
+                            <img src="images/screenshots/dual-subs/dual-subs1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/dual-subs/dual-subs1.png')">
+                        </h3>
+                        <p>A Chrome extension that translates subtitles in real-time from Finnish to English. I developed this extension to aid my own Finnish language learning. The extension captures subtitles from video elements, translates them using the unofficial Google Translate API, and displays them as a movable overlay on the video. Users can customize the overlay's appearance, including background color, text color, text size, and opacity, with settings saved between sessions. The extension has been tested and works on Yle Areena and Yle, though it may not function on other sites due to differing subtitle presentation methods.</p>
+                        <a href="https://github.com/DenysHDev/DualSubs" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('dual-subs')">View Gallery</button>
+                    </li>
                     <li data-language="golang,html,css">
                         <h3>
                             Literary Lions Forum
