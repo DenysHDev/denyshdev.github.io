@@ -71,6 +71,16 @@ function showGallery(project) {
             'images/screenshots/cars-viewer/cars-viewer6.png',
             'images/screenshots/cars-viewer/cars-viewer7.png'
         ];
+    } else if (project === 'stations-pathfinder') {
+        images = [
+            'images/screenshots/stations-pathfinder/stations-pathfinder1.png',
+            'images/screenshots/stations-pathfinder/stations-pathfinder2.png',
+            'images/screenshots/stations-pathfinder/stations-pathfinder3.png',
+            'images/screenshots/stations-pathfinder/stations-pathfinder4.png',
+            'images/screenshots/stations-pathfinder/stations-pathfinder5.png',
+            'images/screenshots/stations-pathfinder/stations-pathfinder6.png',
+            'images/screenshots/stations-pathfinder/stations-pathfinder7.png'
+        ];
     }
 
     images.forEach((src, index) => {
@@ -161,7 +171,7 @@ function filterProjects(language) {
     projects.forEach(project => {
         const dataLanguage = project.getAttribute('data-language');
         if (language === 'all' || (dataLanguage && dataLanguage.split(',').includes(language))) {
-            project.style.display = 'list-item'; // Use 'list-item' to preserve dot styling
+            project.style.display = 'list-item';
         } else {
             project.style.display = 'none';
         }
