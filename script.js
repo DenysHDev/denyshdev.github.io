@@ -61,6 +61,16 @@ function showGallery(project) {
             'images/screenshots/art-interface/artinterface6.png',
             'images/screenshots/art-interface/artinterface7.png'
         ];
+    } else if (project === 'cars-viewer') {
+        images = [
+            'images/screenshots/cars-viewer/cars-viewer1.png',
+            'images/screenshots/cars-viewer/cars-viewer2.png',
+            'images/screenshots/cars-viewer/cars-viewer3.png',
+            'images/screenshots/cars-viewer/cars-viewer4.png',
+            'images/screenshots/cars-viewer/cars-viewer5.png',
+            'images/screenshots/cars-viewer/cars-viewer6.png',
+            'images/screenshots/cars-viewer/cars-viewer7.png'
+        ];
     }
 
     images.forEach((src, index) => {
