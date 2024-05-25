@@ -81,7 +81,18 @@ function showGallery(project) {
             'images/screenshots/stations-pathfinder/stations-pathfinder6.png',
             'images/screenshots/stations-pathfinder/stations-pathfinder7.png'
         ];
+    }   else if (project === 'literary-lions-forum') {
+        images = [
+            'images/screenshots/literary-lions-forum/literary-lions-forum1.png',
+            'images/screenshots/literary-lions-forum/literary-lions-forum2.png',
+            'images/screenshots/literary-lions-forum/literary-lions-forum3.png',
+            'images/screenshots/literary-lions-forum/literary-lions-forum4.png',
+            'images/screenshots/literary-lions-forum/literary-lions-forum5.png',
+            'images/screenshots/literary-lions-forum/literary-lions-forum6.png',
+            'images/screenshots/literary-lions-forum/literary-lions-forum7.png'
+        ];
     }
+
 
     images.forEach((src, index) => {
         const img = document.createElement('img');
