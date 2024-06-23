@@ -105,6 +105,14 @@ function showGallery(project) {
             'images/screenshots/dual-subs/dual-subs5.png'
 
         ];
+    } else if (project === 'js-sprint') {
+        images = [
+            'images/screenshots/js-sprint/js-sprint1.png',
+            'images/screenshots/js-sprint/js-sprint2.png',
+            'images/screenshots/js-sprint/js-sprint3.png',
+            'images/screenshots/js-sprint/js-sprint4.png'
+
+        ];
     }
 
     images.forEach((src, index) => {

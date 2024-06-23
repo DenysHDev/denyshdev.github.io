@@ -40,7 +40,7 @@
                 <h2>Education</h2>
                 <div class="education-entry">
                     <h3>2024-present day - Kood / Sisu Coding School, Finland</h3>
-                    <p>Software Developer</p>
+                    <p>Full Stack Software Developer</p>
                 </div>
                 <div class="education-entry">
                     <h3>2010-2012 - Tavria State Agrotechnological University, Ukraine</h3>
@@ -83,6 +83,14 @@
                         <img src="images/VSC.png" alt="Visual Studio Code Logo">
                         <div class="skill-description"><p>VS Code</p></div>
                     </div>
+                    <div class="skill-item">
+                        <img src="images/PostgreSQL.png" alt="PostgreSQL Logo">
+                        <div class="skill-description"><p>PostgreSQL</p></div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="images/SQLite.png" alt="SQLite Logo">
+                        <div class="skill-description"><p>SQLite</p></div>
+                    </div>
                 </div>
             </section>                      
             <section id="projects" class="content-section">
@@ -102,6 +110,12 @@
                     <button class="filter-button" onclick="filterProjects('css')">
                         <img src="images/css3.png" alt="CSS3">
                     </button>
+                    <button class="filter-button" onclick="filterProjects('postgresql')">
+                        <img src="images/PostgreSQL.png" alt="PostgreSQL">
+                    </button>
+                    <button class="filter-button" onclick="filterProjects('sqlite')">
+                        <img src="images/SQLite.png" alt="SQLite">
+                    </button>
                 </div>
                 <ul id="project-list">
                     <li data-language="java-script,html,css">
@@ -112,6 +126,15 @@
                         <p>A Chrome extension that translates subtitles in real-time from Finnish to English. I developed this extension to aid my own Finnish language learning. The extension captures subtitles from video elements, translates them using the unofficial Google Translate API, and displays them as a movable overlay on the video. Users can customize the overlay's appearance, including background color, text color, text size, and opacity, with settings saved between sessions. The extension has been tested and works on Yle Areena and Yle, though it may not function on other sites due to differing subtitle presentation methods.</p>
                         <a href="https://github.com/DenysHDev/DualSubs" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('dual-subs')">View Gallery</button>
+                    </li>
+                    <li data-language="java-script,html,css">
+                        <h3>
+                            Introduction to the JavaScript
+                            <img src="images/screenshots/js-sprint/js-sprint1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/js-sprint/js-sprint1.png')">
+                        </h3>
+                        <p>As I started learning JavaScript, I completed various tasks that range from basic DOM manipulation to complex object-oriented programming. These tasks include standalone functions and interactive applications, such as creating a chessboard, handling keyboard input, and managing dynamic lists of sports teams. Please note that my GitHub repository for this project is private as requested by Kood/Sisu. Interested parties should contact me via email, as provided in the contact section, to request access.</p>
+                        <a href="https://github.com/DenysHDev/js-sprint" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('js-sprint')">View Gallery</button>
                     </li>
                     <li data-language="golang,html,css">
                         <h3>
