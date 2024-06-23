@@ -205,6 +205,12 @@ function showProjects(page) {
 
     const pagination = document.getElementById('pagination');
     pagination.style.display = (filteredProjects.length <= itemsPerPage) ? 'none' : 'block';
+
+    // Scroll to the top of the body
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
 function nextPage() {
