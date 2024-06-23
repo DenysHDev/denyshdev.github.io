@@ -345,6 +345,7 @@ body, html {
     margin-bottom: 20px;
     display: flex; /* Use flexbox for better alignment */
     gap: 10px; /* Space between buttons */
+    position: relative;
 }
 
 .filter-button {
@@ -373,6 +374,40 @@ body, html {
     background-color: #2575fc; /* Change background color on hover */
     transform: scale(1.1); /* Grow the entire button on hover */
 }
+
+.filter-button .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the button */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.filter-button .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.filter-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 
 /* Contact Section Styles */

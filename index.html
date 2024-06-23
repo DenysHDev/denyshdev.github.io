@@ -24,7 +24,7 @@
             <section id="info" class="content-section" style="display: block;">
                 <h2>My Info</h2>
                 <p>
-                    Hi there. My name is Denys, and I'm a junior software developer. I am an enthusiastic and driven individual with a background in digital art and a degree in engineering, currently transitioning to a career in software development. While new to programming, I am learning fast and I hope this portfolio proves it.  I have a great motivation to improve and progress. Currently, I am studying at kood/Sisu Coding School.
+                    Hi there. My name is Denys, and I'm a junior full stack software developer. I am an enthusiastic and driven individual with a background in digital art and a degree in engineering, currently transitioning to a career in software development. While new to programming, I am learning fast and I hope this portfolio site proves it.  I have a great motivation to improve and progress. Currently, I am studying at kood/Sisu Coding School.
                 </p>
                 <p>
                     On my portfolio site, you will find detailed sections showcasing my journey and skills:
@@ -96,25 +96,33 @@
             <section id="projects" class="content-section">
                 <h2>Projects</h2>
                 <div class="filter-buttons">
-                    <button class="filter-button" onclick="filterProjects('all')">ALL</button>
+                    <button class="filter-button" onclick="filterProjects('all')">
+                        ALL
+                        <span class="tooltip">All Projects</span>
                     </button>
                     <button class="filter-button" onclick="filterProjects('golang')">
-                        <img src="images/Golang.png" alt="Go Lang">
+                        <img src="images/Golang.png" alt="GoLang">
+                        <span class="tooltip">GoLang</span>
                     </button>
                     <button class="filter-button" onclick="filterProjects('java-script')">
-                        <img src="images/java-script.png" alt="java-script">
+                        <img src="images/java-script.png" alt="JavaScript">
+                        <span class="tooltip">JavaScript</span>
                     </button>
                     <button class="filter-button" onclick="filterProjects('html')">
                         <img src="images/html5.png" alt="HTML5">
+                        <span class="tooltip">HTML5</span>
                     </button>
                     <button class="filter-button" onclick="filterProjects('css')">
                         <img src="images/css3.png" alt="CSS3">
+                        <span class="tooltip">CSS3</span>
                     </button>
                     <button class="filter-button" onclick="filterProjects('postgresql')">
                         <img src="images/PostgreSQL.png" alt="PostgreSQL">
+                        <span class="tooltip">PostgreSQL</span>
                     </button>
                     <button class="filter-button" onclick="filterProjects('sqlite')">
                         <img src="images/SQLite.png" alt="SQLite">
+                        <span class="tooltip">SQLite</span>
                     </button>
                 </div>
                 <ul id="project-list">
@@ -127,6 +135,15 @@
                         <a href="https://github.com/DenysHDev/DualSubs" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('dual-subs')">View Gallery</button>
                     </li>
+                    <li data-language="java-script,html,css,sqlite">
+                        <h3>
+                            Beachside Racetrack Real-Time System
+                            <img src="images/screenshots/racetrack/racetrack1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/racetrack/racetrack1.png')">
+                        </h3>
+                        <p>Beachside Racetrack's real-time system manages races and informs spectators efficiently. This project delivered an MVP to handle race preparation, control, and information dissemination using Node.js and Socket.IO. Key features include configuring race sessions, announcing upcoming races, starting and controlling races, recording lap times, and displaying real-time leaderboards. The system caters to various user personas, including employees, race drivers, and spectators, with secure access for different roles. Employee interfaces are protected by access keys, ensuring only authorized personnel can manage race operations. The system reduces reliance on staff through technology while providing accurate and timely information to all users. Please note that my GitHub repository for this project is private as requested by Kood/Sisu. Interested parties should contact me via email, as provided in the contact section, to request access.</p>
+                        <a href="https://github.com/DenysHDev/racetrack" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('racetrack')">View Gallery</button>
+                    </li>
                     <li data-language="java-script,html,css">
                         <h3>
                             Introduction to the JavaScript
@@ -136,7 +153,7 @@
                         <a href="https://github.com/DenysHDev/js-sprint" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('js-sprint')">View Gallery</button>
                     </li>
-                    <li data-language="golang,html,css">
+                    <li data-language="golang,html,css,sqlite">
                         <h3>
                             Literary Lions Forum
                             <img src="images/screenshots/literary-lions-forum/literary-lions-forum1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/literary-lions-forum/literary-lions-forum1.png')">

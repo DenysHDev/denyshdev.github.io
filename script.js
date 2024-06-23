@@ -113,6 +113,15 @@ function showGallery(project) {
             'images/screenshots/js-sprint/js-sprint4.png'
 
         ];
+    } else if (project === 'racetrack') {
+        images = [
+            'images/screenshots/racetrack/racetrack1.png',
+            'images/screenshots/racetrack/racetrack2.png',
+            'images/screenshots/racetrack/racetrack3.png',
+            'images/screenshots/racetrack/racetrack4.png',
+            'images/screenshots/racetrack/racetrack5.png'
+
+        ];
     }
 
     images.forEach((src, index) => {
