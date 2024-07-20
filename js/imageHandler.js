@@ -103,7 +103,18 @@ function showGallery(project) {
             'images/screenshots/racetrack/racetrack4.png',
             'images/screenshots/racetrack/racetrack5.png'
         ];
-    }
+    } else if (project === 'match-me') {
+        images = [
+            'images/screenshots/match-me/match-me1.png',
+            'images/screenshots/match-me/match-me2.png',
+            'images/screenshots/match-me/match-me3.png',
+            'images/screenshots/match-me/match-me4.png',
+            'images/screenshots/match-me/match-me5.png',
+            'images/screenshots/match-me/match-me6.png',
+            'images/screenshots/match-me/match-me7.png',
+            'images/screenshots/match-me/match-me8.png'
+        ];
+    } 
 
     images.forEach((src, index) => {
         const img = document.createElement('img');
