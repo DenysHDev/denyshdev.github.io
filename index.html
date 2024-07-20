@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <div class="container">
@@ -92,7 +92,7 @@
                         <div class="skill-description"><p>SQLite</p></div>
                     </div>
                 </div>
-            </section>                      
+            </section>
             <section id="projects" class="content-section">
                 <h2>Projects</h2>
                 <div class="filter-buttons">
@@ -126,6 +126,15 @@
                     </button>
                 </div>
                 <ul id="project-list">
+                    <li data-language="java-script,html,css,postgresql,golang">
+                        <h3>
+                            Match-Me Web
+                            <img src="images/screenshots/match-me/match-me1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/match-me/match-me1.png')">
+                        </h3>
+                        <p>A Chrome extension that translates subtitles in real-time from Finnish to English. I developed this extension to aid my own Finnish language learning. The extension captures subtitles from video elements, translates them using the unofficial Google Translate API, and displays them as a movable overlay on the video. Users can customize the overlay's appearance, including background color, text color, text size, and opacity, with settings saved between sessions. The extension has been tested and works on Yle Areena and Yle, though it may not function on other sites due to differing subtitle presentation methods.</p>
+                        <a href="https://github.com/DenysHDev/DualSubs" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('match-me')">View Gallery</button>
+                    </li>
                     <li data-language="java-script,html,css">
                         <h3>
                             Double Subtitles Chrome Extension
@@ -223,25 +232,25 @@
                     <button onclick="nextPage()" id="nextPageBtn">Next</button>
                 </div>
             </section>
-            
+
             <!-- Existing Gallery Modal -->
             <div id="galleryModal" class="modal">
                 <span class="close" onclick="closeGallery()">&times;</span>
                 <div class="modal-content" id="galleryContent"></div>
             </div>
-            
+
             <!-- Full Image Modal for Gallery -->
             <div id="fullImageModal" class="modal">
                 <img id="fullImage" class="full-image" onclick="toggleFullImage()">
                 <button class="nav-button left" onclick="showPreviousImage()">&#10094;</button>
                 <button class="nav-button right" onclick="showNextImage()">&#10095;</button>
             </div>
-            
+
             <!-- Full Image Modal for Single Preview Image -->
             <div id="singleImageModal" class="modal" onclick="closeSingleImage()">
                 <img id="singleImage" class="full-image">
             </div>
-            
+
             <section id="contact" class="content-section" style="display:none;">
                 <h2>Contact</h2>
                 <p>If you'd like to get in touch, feel free to reach out through the following:</p>
@@ -252,6 +261,7 @@
             </section>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/imageHandler.js"></script>
 </body>
 </html>
