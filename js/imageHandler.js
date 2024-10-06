@@ -122,6 +122,17 @@ function showGallery(project) {
             'images/screenshots/framework/framework4.png',
             'images/screenshots/framework/framework5.png'
         ];
+    } else if (project === 'web-game') {
+        images = [
+            'images/screenshots/web-game/web-game1.png',
+            'images/screenshots/web-game/web-game2.png',
+            'images/screenshots/web-game/web-game3.png',
+            'images/screenshots/web-game/web-game4.png',
+            'images/screenshots/web-game/web-game5.png',
+            'images/screenshots/web-game/web-game6.png',
+            'images/screenshots/web-game/web-game7.png',
+            'images/screenshots/web-game/web-game8.png'
+        ];
     }
 
     images.forEach((src, index) => {
