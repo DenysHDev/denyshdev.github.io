@@ -114,7 +114,15 @@ function showGallery(project) {
             'images/screenshots/match-me/match-me7.png',
             'images/screenshots/match-me/match-me8.png'
         ];
-    } 
+    } else if (project === 'framework') {
+        images = [
+            'images/screenshots/framework/framework1.png',
+            'images/screenshots/framework/framework2.png',
+            'images/screenshots/framework/framework3.png',
+            'images/screenshots/framework/framework4.png',
+            'images/screenshots/framework/framework5.png'
+        ];
+    }
 
     images.forEach((src, index) => {
         const img = document.createElement('img');
