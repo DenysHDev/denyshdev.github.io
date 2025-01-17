@@ -29,6 +29,17 @@
     margin-top: 10px;
 }
 
+.content-section {
+    display: none; /* Hidden by default */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.4s ease; /* Smooth fade effect */
+}
+
+.content-section.show {
+    display: block; /* Make visible */
+    opacity: 1; /* Fully visible */
+}
+
 /* EDUCATION */
 
 .education-entry {

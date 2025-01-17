@@ -4,15 +4,32 @@ const projectList = document.getElementById('project-list');
 let projects = Array.from(projectList.children);
 let filteredProjects = projects; // This will hold the filtered projects
 
+document.addEventListener('DOMContentLoaded', () => {
+    showSection('info');
+})
+
 // Show a specific section
 function showSection(sectionId) {
-    // Hide all sections
-    document.querySelectorAll('.content-section').forEach((section) => {
-        section.style.display = 'none';
+    const allSections = document.querySelectorAll('.content-section');
+    const newSection = document.getElementById(sectionId);
+
+    // Fade out all sections
+    allSections.forEach((section) => {
+        if (section.style.display === 'block') {
+            section.style.opacity = '0'; // Start fade out
+            setTimeout(() => {
+                section.style.display = 'none'; // Hide after fade out
+            }, 400); // Match the duration of the CSS transition
+        }
     });
 
-    // Show the selected section
-    document.getElementById(sectionId).style.display = 'block';
+    // Fade in the new section
+    setTimeout(() => {
+        newSection.style.display = 'block'; // Show new section
+        setTimeout(() => {
+            newSection.style.opacity = '1'; // Start fade in
+        }, 50); // Slight delay to trigger the CSS transition
+    }, 400); // Match the duration of the fade-out transition
 }
 
 // Show the projects for the current page
