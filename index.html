@@ -23,7 +23,7 @@
         <div class="main-content">
             <section id="info" class="content-section" style="display: block;">
                 <h2>My Info</h2>
-                <p style="font-size:16px;">
+                <p style="font-size:20px;">
                     Hi there! Welcome to my portfolio. My name is <strong>Denys</strong>, and I'm a junior full-stack software developer. 
                     I'm excited to share my journey with you!
                 </p>
@@ -39,7 +39,7 @@
                         Currently, I am studying at <strong>kood/Sisu Coding School</strong>.
                     </p>
                 </div>
-                <p style="font-size:16px;">
+                <p style="font-size:20px; text-align: center;">
                     Explore the key sections of my portfolio to discover my skills, projects, education, and ways to connect with me.
                 </p>
                 <div class="portfolio-grid">
@@ -68,7 +68,9 @@
                         </p>
                     </div>
                 </div>
+                <p style="font-size:20px; margin: 30px; text-align: center;">
                 <b>Skills & Tools:</b> Tools and technologies I am proficient in, as well as the skills I am continuously developing.
+                </p>    
             </p>
             <div class="skills-grid">
                 <div class="skill-item" draggable="true" data-skill="Golang">
@@ -209,13 +211,41 @@
                         <button class="button" onclick="showGallery('web-game')">View Gallery</button>
                     </li>
                     <li data-language="java-script,html,css,postgresql,golang">
-                        <h3>
-                            Match-Me Web
-                            <img src="images/screenshots/match-me/match-me1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/match-me/match-me1.png')">
-                        </h3>
+                        <div class="project-header">
+                            <h3>
+                                Match-Me Web
+                                <img src="images/screenshots/match-me/match-me1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/match-me/match-me1.png')">
+                            </h3>
+                            <div class="technologies-used">
+                                <img src="images/React.png" alt="React Logo" class="tech-logo" title="React">
+                                <img src="images/GoLang.png" alt="GoLang Logo" class="tech-logo" title="GoLang">
+                                <img src="images/PostgreSQL.png" alt="PostgreSQL Logo" class="tech-logo" title="PostgreSQL">
+                                <img src="images/css3.png" alt="CSS3 Logo" class="tech-logo" title="CSS3">
+                                <img src="images/html5.png" alt="HTML5 Logo" class="tech-logo" title="HTML5">
+                                <img src="images/GoLand.png" alt="GoLand Code Logo" class="tech-logo" title="GoLand">
+                                <img src="images/github.png" alt="GitHub Code Logo" class="tech-logo" title="GitHub">
+                            </div>
+                        </div>
                         <p>Match-Me Web is a full-stack recommendation platform designed to connect users based on shared interests, preferences, and characteristics. Built using React for the frontend and Go (Golang) for the backend, it leverages PostgreSQL for data persistence. The application supports user registration, profile creation, and viewing of tailored recommendations powered by a custom matching algorithm. Users can connect and chat in real-time with WebSocket implementation, ensuring seamless communication. The system also includes location-based filtering and secure session management with JWT. <b>Please note that my GitHub repository for this project is private as requested by Kood/Sisu. Interested parties should contact me via email, as provided in the contact section, to request access.</b></p>
                         <a href="https://github.com/DenysHDev/match-me" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('match-me')">View Gallery</button>
+                    </li>
+                    <li data-language="java-script,html,css">
+                        <div class="project-header">
+                            <h3>
+                                Double Subtitles Chrome Extension
+                                <img src="images/screenshots/dual-subs/dual-subs1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/dual-subs/dual-subs1.png')">
+                            </h3>
+                            <div class="technologies-used">
+                                <img src="images/java-script.png" alt="JavaScript Logo" class="tech-logo" title="JavaScript">
+                                <img src="images/css3.png" alt="CSS3 Logo" class="tech-logo" title="CSS3">
+                                <img src="images/html5.png" alt="HTML5 Logo" class="tech-logo" title="HTML5">
+                                <img src="images/github.png" alt="GitHub Code Logo" class="tech-logo" title="GitHub">
+                            </div>
+                        </div>
+                        <p>A Chrome extension that translates subtitles in real-time from Finnish to English. I developed this extension to aid my own Finnish language learning. The extension captures subtitles from video elements, translates them using the unofficial Google Translate API, and displays them as a movable overlay on the video. Users can customize the overlay's appearance, including background color, text color, text size, and opacity, with settings saved between sessions. The extension has been tested and works on Yle Areena and Yle, though it may not function on other sites due to differing subtitle presentation methods.</p>
+                        <a href="https://github.com/DenysHDev/DualSubs" target="_blank" class="button">GitHub Repository</a>
+                        <button class="button" onclick="showGallery('dual-subs')">View Gallery</button>
                     </li>
                     <li data-language="java-script">
                         <h3>
@@ -225,15 +255,6 @@
                         <p>Dot-Js is a lightweight, JavaScript-based front-end framework that allows developers to create dynamic user interfaces with ease. Built from scratch, it emphasizes simplicity and gives full control over application architecture, minimizing JavaScript fatigue. It features robust state management, customizable DOM manipulation, and seamless event handling to simplify the development process without the need for extensive third-party dependencies. The framework includes comprehensive documentation, covering architecture, installation, and best practices, ensuring it's accessible for both beginners and advanced users. A demonstration project showcases the framework's capabilities, highlighting its efficiency and ease of use for everyday applications. <b>Please note that my GitHub repository for this project is private as requested by Kood/Sisu. Interested parties should contact me via email, as provided in the contact section, to request access.</b></p>
                         <a href="https://github.com/DenysHDev/framework" target="_blank" class="button">GitHub Repository</a>
                         <button class="button" onclick="showGallery('framework')">View Gallery</button>
-                    </li>
-                    <li data-language="java-script,html,css">
-                        <h3>
-                            Double Subtitles Chrome Extension
-                            <img src="images/screenshots/dual-subs/dual-subs1.png" alt="Preview" class="project-preview" onclick="showSingleImage('images/screenshots/dual-subs/dual-subs1.png')">
-                        </h3>
-                        <p>A Chrome extension that translates subtitles in real-time from Finnish to English. I developed this extension to aid my own Finnish language learning. The extension captures subtitles from video elements, translates them using the unofficial Google Translate API, and displays them as a movable overlay on the video. Users can customize the overlay's appearance, including background color, text color, text size, and opacity, with settings saved between sessions. The extension has been tested and works on Yle Areena and Yle, though it may not function on other sites due to differing subtitle presentation methods.</p>
-                        <a href="https://github.com/DenysHDev/DualSubs" target="_blank" class="button">GitHub Repository</a>
-                        <button class="button" onclick="showGallery('dual-subs')">View Gallery</button>
                     </li>
                     <li data-language="java-script,html,css,sqlite">
                         <h3>
