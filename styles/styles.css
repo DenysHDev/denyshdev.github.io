@@ -133,6 +133,7 @@ body, html {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
 }
 
 .spoiler-button:hover {
@@ -165,6 +166,124 @@ body, html {
 }
 
 
+/* Portfolio Overview Section */
+#portfolio-overview {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio-overview h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#portfolio-overview p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Portfolio Grid Layout */
+.portfolio-grid {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Add a vibrant border to portfolio items */
+/* Portfolio Item with Gradient Border and Rounded Corners */
+.portfolio-item {
+    position: relative; /* Ensures pseudo-element positioning */
+    text-align: center;
+    max-width: 300px;
+    padding: 20px;
+    background: #fdfcfd;
+    border-radius: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 1;
+}
+
+/* Create the gradient border using a pseudo-element */
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border-radius: 22px; /* Must be slightly larger than the main border-radius */
+    z-index: -1;
+    padding: 5px; /* Thickness of the border */
+    -webkit-mask: 
+        linear-gradient(black, black) content-box, 
+        linear-gradient(black, black);
+    mask: 
+        linear-gradient(black, black) content-box, 
+        linear-gradient(black, black);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+/* Hover effect for border brightness */
+.portfolio-item:hover::before {
+    filter: brightness(1.2);
+}
+
+
+/* Add gradient border effect */
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    border-color: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient border on hover */
+}
+
+/* Optional: Gradient border for always-on style */
+.portfolio-item {
+    border-image: linear-gradient(90deg, #6a11cb, #2575fc) 1;
+}
+
+
+/* Icons for Portfolio Items */
+.portfolio-icon {
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #6a11cb;
+}
+
+.portfolio-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.portfolio-item:hover .portfolio-icon {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 
 
