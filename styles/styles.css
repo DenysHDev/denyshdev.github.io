@@ -88,6 +88,8 @@ body, html {
     }
 }
 
+
+
 /* Main content styles */
 .main-content {
     flex-grow: 1;
@@ -118,6 +120,55 @@ body, html {
     margin-top: 10px;
 }
 
+
+/* Spoiler Button Styles */
+.spoiler-button {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.spoiler-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.spoiler-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Spoiler Content Styles */
+.spoiler-hidden {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.spoiler-visible {
+    max-height: 300px; /* Adjust based on content */
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+#spoiler-content p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+
+
+
+
+/* CONTENT SECTIONS */
 .content-section {
     display: none; /* Hidden by default */
     opacity: 0; /* Start invisible */
@@ -129,8 +180,15 @@ body, html {
     opacity: 1; /* Fully visible */
 }
 
-/* EDUCATION */
+.content-section p {
+    text-align: justify;
+}
 
+
+
+
+
+/* EDUCATION */
 .education-entry {
     background: #f9f9f9;
     margin-bottom: 10px;
@@ -195,6 +253,10 @@ body, html {
     margin: 0;
 }
 
+
+
+
+
 /* Project preview images */
 .project-preview {
     width: 50px; 
@@ -208,6 +270,10 @@ body, html {
     box-shadow: 0 0 5px rgba(0,0,0,0.1); 
     cursor: pointer; 
 }
+
+
+
+
 
 /* Single Image Modal for Preview */
 #singleImageModal {
@@ -241,6 +307,10 @@ body, html {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 
+
+
+
+
 /* General button styling */
 .button {
     background-color: #6a11cb;
@@ -260,6 +330,10 @@ body, html {
 .button:hover {
     background-color: #2575fc;
 }
+
+
+
+
 
 /* Gallery Modal */
 .modal {
@@ -309,6 +383,10 @@ body, html {
     cursor: pointer;
 }
 
+
+
+
+
 /* Full Image Modal */
 .full-image {
     display: block;
@@ -339,6 +417,9 @@ body, html {
     right: 45px;
 }
 
+
+
+
 /* Additional styles for the info section */
 #info ul {
     list-style-type: disc;
@@ -351,13 +432,9 @@ body, html {
 }
 
 #info li strong {
-    color: #6a11cb; /* Highlight the section titles */
+    color: #6a11cb; 
 }
 
-/* Ensuring the content-section paragraphs are justified */
-.content-section p {
-    text-align: justify;
-}
 
 /* Navigation buttons */
 .nav-button {

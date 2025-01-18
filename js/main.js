@@ -32,6 +32,26 @@ function showSection(sectionId) {
     }, 400); // Match the duration of the fade-out transition
 }
 
+//Spoiler
+document.addEventListener("DOMContentLoaded", () => {
+    const spoilerButton = document.getElementById("spoiler-button");
+    const spoilerContent = document.getElementById("spoiler-content");
+
+    spoilerButton.addEventListener("click", () => {
+        if (spoilerContent.classList.contains("spoiler-hidden")) {
+            spoilerContent.classList.remove("spoiler-hidden");
+            spoilerContent.classList.add("spoiler-visible");
+            spoilerButton.textContent = "Hide Info";
+        } else {
+            spoilerContent.classList.remove("spoiler-visible");
+            spoilerContent.classList.add("spoiler-hidden");
+            spoilerButton.textContent = "Learn More About Me";
+        }
+    });
+});
+
+
+
 // Show the projects for the current page
 function showProjects(page) {
     const start = (page - 1) * itemsPerPage;
