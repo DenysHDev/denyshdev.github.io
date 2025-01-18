@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 // Show the projects for the current page
 function showProjects(page) {
     const start = (page - 1) * itemsPerPage;
@@ -115,4 +114,51 @@ function filterProjects(language) {
     // Hide pagination if fewer than 6 projects are visible
     const pagination = document.getElementById('pagination');
     pagination.style.display = (filteredProjectsCount <= itemsPerPage) ? 'none' : 'block';
+}
+
+
+
+//Drag functionality for skill list
+
+const skillItems = document.querySelectorAll('.skill-item');
+let draggedItem = null;
+
+skillItems.forEach(item => {
+    item.addEventListener('dragstart', (e) => {
+        draggedItem = item;
+        setTimeout(() => item.classList.add('dragging'), 0);
+    });
+
+    item.addEventListener('dragend', () => {
+        draggedItem.classList.remove('dragging');
+        draggedItem = null;
+    });
+});
+
+const grid = document.querySelector('.skills-grid');
+grid.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    const afterElement = getDragAfterElement(grid, e.clientX, e.clientY);
+    if (afterElement == null) {
+        grid.appendChild(draggedItem);
+    } else {
+        grid.insertBefore(draggedItem, afterElement);
+    }
+});
+
+function getDragAfterElement(container, x, y) {
+    const draggableElements = [...container.querySelectorAll('.skill-item:not(.dragging)')];
+
+    return draggableElements.reduce((closest, child) => {
+        const box = child.getBoundingClientRect();
+        const offsetX = x - (box.left + box.width / 2); // Horizontal offset
+        const offsetY = y - (box.top + box.height / 2); // Vertical offset
+        const distance = Math.sqrt(offsetX ** 2 + offsetY ** 2);
+
+        if (distance < closest.distance) {
+            return { distance: distance, element: child };
+        } else {
+            return closest;
+        }
+    }, { distance: Number.POSITIVE_INFINITY }).element;
 }

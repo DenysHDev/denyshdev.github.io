@@ -350,11 +350,24 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: grab;
 }
 
 .skill-item:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
+}
+
+.skill-item:active {
+    cursor: grabbing; /* Indicates dragging in progress */
+    opacity: 0.6;
+}
+
+.skill-item.dragging {
+    opacity: 0.8;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.15);
+    border: 2px solid #007bff; /* Solid border during dragging */
+    background-color: #f8f9fa; 
 }
 
 .skill-item img {
