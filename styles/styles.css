@@ -403,10 +403,6 @@ body, html {
     cursor: pointer; 
 }
 
-
-
-
-
 /* Single Image Modal for Preview */
 #singleImageModal {
     display: none;
@@ -437,6 +433,46 @@ body, html {
 .project-preview:hover {
     transform: scale(5); /* Scale up the image slightly */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.project-header {
+    display: flex;
+    align-items: center; /* Align content vertically in the middle */
+    gap: 20px; /* Space between the image and the technologies */
+}
+
+.project-preview {
+    width: 100px; /* Adjust preview image size */
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.technologies-used {
+    display: flex;
+    flex-wrap: wrap; /* Wrap logos to the next line if needed */
+    gap: 10px; /* Space between technology logos */
+}
+
+.technologies-used .tech-logo {
+    width: 40px; 
+    height: auto; 
+    object-fit: contain; 
+    cursor: pointer;
+    transition: transform 0.3s;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 5px; 
+    background-color: #6a11cb; 
+}
+
+.technologies-used .tech-logo:hover {
+    transform: scale(1.2); 
+}
+
+
+.technologies-used .tech-logo:hover {
+    transform: scale(1.2); 
 }
 
 
@@ -717,6 +753,8 @@ body, html {
     font-size: 16px;
     margin: 0 10px;
 }
+
+
 
 
 /* Responsive adjustments */
